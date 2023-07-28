@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Police par défaut pour les paragraphes et les liens */
+p,
+a {
+  font-family: "Playfair Display", serif;
+}
+
+/* Police par défaut pour les titres h1 à h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Berkshire Swash", cursive;
+}
