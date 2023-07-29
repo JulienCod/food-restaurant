@@ -209,6 +209,45 @@ function App() {
             ))}
       </section>
       {/* fin section 4 */}
+            {/* section 5 */}
+            <section className="flex flex-col gap-[50px]">
+        <h2 className="text-[32px] w-[305px] mx-auto text-center">
+          La santé est le bien le plus précieux.
+        </h2>
+        <div className="w-[344px] my-[18px] mx-auto flex flex-col gap-[32px] text-[18px]">
+          <p>
+            Bien qu'il soit important d'avoir des sucres naturellement présents
+            dans votre alimentation, de nombreux aliments contiennent des sucres
+            ajoutés nocifs qui n'apportent aucune valeur nutritive.
+          </p>
+          <p>
+            Selon une étude menée par l'Université de Floride, le cerveau libère
+            des substances chimiques similaires à l'héroïne appelées opioïdes
+            endogènes lorsque quelqu'un se laisse aller à des aliments sucrés,
+            salés ou gras.
+          </p>
+        </div>
+        <img
+          className="w-[349px] h-[298px] object-cover m-auto"
+          src="/src/assets/images/image-santé.jpg"
+          alt=""
+        />
+        <img
+          className="w-[349px] h-[298px] object-cover m-auto"
+          src="/src/assets/images/image-santé-2.jpg"
+          alt=""
+        />
+        <div className="w-[344px] my-[18px] mx-auto flex flex-col gap-[32px] text-[18px]">
+          <p>
+            Nous vous apportons le meilleur mélange de produits biologiques de
+            saison et d'artisanat de ferme directement à votre porte en
+            travaillant en partenariat avec des fermes locales et des artisans
+            de votre région. Découvrez la fraîcheur et la qualité de nos
+            produits, le tout dans le confort de votre foyer.
+          </p>
+        </div>
+      </section>
+      {/* fin section 5 */}
     </>
   );
 }
