@@ -176,6 +176,39 @@ function App() {
         </div>
       </section>
       {/* fin section 3 */}
+            {/* section 4 */}
+            <section>
+        {articles.length <= 0
+          ? null
+          : articles.map((article, index) => (
+              <article
+                className="text-center flex flex-col gap-[32px] my-[32px]"
+                key={index}
+              >
+                <img
+                  className="h-[296px] w-[350px] object-cover m-auto"
+                  src={article.img}
+                  alt=""
+                />
+                <h2 className="w-[362px] m-auto text-[32px]">
+                  {article.titleH2}
+                </h2>
+                <h3 className="w-[362px] m-auto text-[24px]">
+                  {article.titleH3}
+                </h3>
+                <div>
+                  <p className="w-[351px] m-auto text-[18px]">{article.content}</p>
+                </div>
+                <a
+                  className="underline text-[22px] font-bold hover:cursor-pointer"
+                  href="#"
+                >
+                  En savoir plus
+                </a>
+              </article>
+            ))}
+      </section>
+      {/* fin section 4 */}
     </>
   );
 }
