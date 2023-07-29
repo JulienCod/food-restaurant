@@ -159,6 +159,23 @@ function App() {
             ))}
       </section>
       {/* fin section 2 */}
+      {/* section 3 */}
+      <section className="h-[657px]  text-gray-100  bg-[url('/src/assets/images/section-2.jpg')] bg-center bg-cover">
+        <div className=" bg-black h-full w-full bg-opacity-60 z-0 gap-[20px] flex flex-wrap items-center justify-center">
+          {icons.length <= 0
+            ? null
+            : icons.map((icon, index) => (
+                <article
+                  className="bg-black rounded-lg bg-opacity-[60%] h-[170px] w-[170px] flex flex-col items-center gap-[27px] justify-center text-center"
+                  key={index}
+                >
+                  <img className="max-w-[48px]" src={icon.svg} alt="" />
+                  <p className="uppercase text-[16px]">{icon.text}</p>
+                </article>
+              ))}
+        </div>
+      </section>
+      {/* fin section 3 */}
     </>
   );
 }
