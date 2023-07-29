@@ -272,6 +272,40 @@ function App() {
         </a>
       </section>
       {/* fin section 6 */}
+            {/* section 7 */}
+            <section className="flex flex-col gap-[50px] my-[50px]">
+        <div >
+          <img
+            className="h-[560px] w-full object-cover "
+            src="/src/assets/images/image-bottom (1).jpg"
+            alt=""
+          />
+          <img
+            className="h-[560px] w-full object-cover "
+            src="/src/assets/images/image-bottom (2).jpg"
+            alt=""
+          />
+          <img
+            className="h-[560px] w-full object-cover "
+            src="/src/assets/images/image-bottom (3).jpg"
+            alt=""
+          />
+        </div>
+        <div className="w-[358px] m-auto ">
+          <p className="text-[18px] font-bold text-center">
+            Nous apportons le meilleur mélange de produits biologiques de la
+            saison produits fermiers et artisanaux facilement à votre porte en
+            cultivant et partenariat avec des fermes et des artisans locaux dans
+            votre région.
+          </p>
+        </div>
+        <div className="flex justify-center gap-3">
+          <img src="/src/assets/svg/facebook.svg" alt="" />
+          <img src="/src/assets/svg/twitter.svg" alt="" />
+          <img src="/src/assets/svg/intagram.svg" alt="" />
+        </div>
+      </section>
+      {/* fin section 7 */}
     </>
   );
 }
