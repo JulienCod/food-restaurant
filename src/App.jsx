@@ -176,8 +176,8 @@ function App() {
         </div>
       </section>
       {/* fin section 3 */}
-            {/* section 4 */}
-            <section>
+      {/* section 4 */}
+      <section>
         {articles.length <= 0
           ? null
           : articles.map((article, index) => (
@@ -197,7 +197,9 @@ function App() {
                   {article.titleH3}
                 </h3>
                 <div>
-                  <p className="w-[351px] m-auto text-[18px]">{article.content}</p>
+                  <p className="w-[351px] m-auto text-[18px]">
+                    {article.content}
+                  </p>
                 </div>
                 <a
                   className="underline text-[22px] font-bold hover:cursor-pointer"
@@ -209,8 +211,8 @@ function App() {
             ))}
       </section>
       {/* fin section 4 */}
-            {/* section 5 */}
-            <section className="flex flex-col gap-[50px]">
+      {/* section 5 */}
+      <section className="flex flex-col gap-[50px]">
         <h2 className="text-[32px] w-[305px] mx-auto text-center">
           La santé est le bien le plus précieux.
         </h2>
@@ -248,6 +250,28 @@ function App() {
         </div>
       </section>
       {/* fin section 5 */}
+      {/* section 6 */}
+      <section className=" flex flex-col gap-[50px]">
+        <h2 className="text-center text-[32px] w-[349px] mt-5 mx-auto">
+          Apprenez à cuisiner en ligne
+        </h2>
+        <div className="w-[350px] m-auto">
+          <p className="text-[18px]">
+            Découvrez l'art de la cuisine depuis chez vous avec nos cours en
+            ligne ! Plongez dans un monde de saveurs et d'expertise culinaire,
+            tout en perfectionnant vos talents de chef.
+          </p>
+        </div>
+        <div className="w-[349px] m-auto flex flex-col gap-[50px]">
+          <img src="/src/assets/images/apprendre-1.jpg" alt="" />
+          <img src="/src/assets/images/apprendre-2.jpg" alt="" />
+          <img src="/src/assets/images/apprendre-3.jpg" alt="" />
+        </div>
+        <a className="underline font-bold text-center text-[22px]" href="#">
+          En savoir plus
+        </a>
+      </section>
+      {/* fin section 6 */}
     </>
   );
 }
