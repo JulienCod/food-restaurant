@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*{
+  letter-spacing: 1.5px;
+  line-height:125%
+}
+
 /* Police par défaut pour les paragraphes et les liens */
 p,
 a {
