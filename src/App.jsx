@@ -136,8 +136,29 @@ function App() {
         </div>
       </div>
       {/* fin Section 1 */}
-
-
+      {/* section 2 */}
+      <section className="">
+        <h2 className="text-[32px] underline text-center py-[35px]">
+          Notre menu
+        </h2>
+        <h3 className="text-[24px] text-center pb-[35px]">Délice du chef</h3>
+        {itemsMenu.length <= 0
+          ? null
+          : itemsMenu.map((item, index) => (
+              <article
+                key={index}
+                className="h-[200px] flex flex-col gap-[28px] border-t border-b border-black text-center"
+              >
+                <h4 className="w-[378px] text-[20px] mt-[34px] mx-auto">
+                  {item.title + " " + item.price + " €"}
+                </h4>
+                <div className="w-[378] min-h-[83px] mx-auto flex items-center">
+                  <p className="text-[18px]">{item.recipe}</p>
+                </div>
+              </article>
+            ))}
+      </section>
+      {/* fin section 2 */}
     </>
   );
 }
