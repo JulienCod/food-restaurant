@@ -306,6 +306,13 @@ function App() {
         </div>
       </section>
       {/* fin section 7 */}
+            {/* footer */}
+            <footer className="bg-gray-300 h-[100px] flex justify-center items-center">
+          <p className="text-[20px] font-bold text-center">
+          Réalisé par <a className="underline" href="https://julien-webandco.fr">Julien Web&Co</a>
+          </p>
+      </footer>
+      {/* fin footer */}
     </>
   );
 }
