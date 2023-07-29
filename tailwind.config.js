@@ -10,7 +10,7 @@ export default {
         sans: ['Roboto', 'sans-serif'],
         cursive: ['Berkshire Swash', 'cursive'],
         serif: ['Playfair Display', 'serif'],
-      },
+      }
     },
   },
   plugins: [
