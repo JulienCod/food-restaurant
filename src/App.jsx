@@ -295,24 +295,24 @@ function App() {
       {/* fin section 6 */}
       {/* section 7 */}
       <section className="flex flex-col gap-[50px] my-[50px]">
-        <div>
+        <div className="md:flex">
           <img
-            className="h-[560px] w-full object-cover "
+            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%] "
             src="/src/assets/images/image-bottom (1).jpg"
             alt=""
           />
           <img
-            className="h-[560px] w-full object-cover "
+            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%]"
             src="/src/assets/images/image-bottom (2).jpg"
             alt=""
           />
           <img
-            className="h-[560px] w-full object-cover "
+            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%]"
             src="/src/assets/images/image-bottom (3).jpg"
             alt=""
           />
         </div>
-        <div className="max-w-[358px] px-2 m-auto ">
+        <div className="max-w-[358px] px-2 m-auto md:max-w-[75%] ">
           <p className=" font-bold text-center">
             Nous apportons le meilleur mélange de produits biologiques de la
             saison produits fermiers et artisanaux facilement à votre porte en
