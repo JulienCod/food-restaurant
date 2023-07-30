@@ -229,41 +229,45 @@ function App() {
       </section>
       {/* fin section 4 */}
       {/* section 5 */}
-      <section className="flex flex-col gap-[50px]">
-        <h2 className="text-[32px] w-[305px] mx-auto text-center">
-          La santé est le bien le plus précieux.
-        </h2>
-        <div className="max-w-[344px] px-2 my-[18px] mx-auto flex flex-col gap-[32px] ">
-          <p>
-            Bien qu'il soit important d'avoir des sucres naturellement présents
-            dans votre alimentation, de nombreux aliments contiennent des sucres
-            ajoutés nocifs qui n'apportent aucune valeur nutritive.
-          </p>
-          <p>
-            Selon une étude menée par l'Université de Floride, le cerveau libère
-            des substances chimiques similaires à l'héroïne appelées opioïdes
-            endogènes lorsque quelqu'un se laisse aller à des aliments sucrés,
-            salés ou gras.
-          </p>
+      <section className="max-w-5xl flex flex-col gap-[50px] px-2 m-auto">
+        <div className="md:flex md:gap-8">
+          <div className="max-w-[344px] my-[18px] mx-auto md:mr-0 flex flex-col gap-8 md:justify-center md:gap-4 md:h-[500px] md:min-w-[calc(50%-16px)]">
+            <h2 className="text-[32px] w-[305px] mx-auto text-center">
+              La santé est le bien le plus précieux.
+            </h2>
+            <p>
+              Bien qu'il soit important d'avoir des sucres naturellement
+              présents dans votre alimentation, de nombreux aliments contiennent
+              des sucres ajoutés nocifs qui n'apportent aucune valeur nutritive.
+            </p>
+            <p>
+              Selon une étude menée par l'Université de Floride, le cerveau
+              libère des substances chimiques similaires à l'héroïne appelées
+              opioïdes endogènes lorsque quelqu'un se laisse aller à des
+              aliments sucrés, salés ou gras.
+            </p>
+          </div>
+          <img
+            className="w-[349px] h-[298px] md:h-[550px] md:min-w-[calc(50%-16px)] object-cover m-auto md:ml-0 "
+            src="/src/assets/images/image-santé.jpg"
+            alt="Image représentant une bol de nourriture"
+          />
         </div>
-        <img
-          className="w-[349px] h-[298px] object-cover m-auto"
-          src="/src/assets/images/image-santé.jpg"
-          alt=""
-        />
-        <img
-          className="w-[349px] h-[298px] object-cover m-auto"
-          src="/src/assets/images/image-santé-2.jpg"
-          alt=""
-        />
-        <div className="max-w-[344px] px-2 my-[18px] mx-auto flex flex-col gap-[32px] ">
-          <p>
-            Nous vous apportons le meilleur mélange de produits biologiques de
-            saison et d'artisanat de ferme directement à votre porte en
-            travaillant en partenariat avec des fermes locales et des artisans
-            de votre région. Découvrez la fraîcheur et la qualité de nos
-            produits, le tout dans le confort de votre foyer.
-          </p>
+        <div className="md:flex md:gap-8">
+          <img
+            className="w-[349px] h-[298px] md:h-[500px] md:min-w-[calc(50%-16px)] object-cover m-auto md:mr-0"
+            src="/src/assets/images/image-santé-2.jpg"
+            alt="Image représentant un bol de fruit"
+          />
+          <div className="max-w-[344px] my-[18px] mx-auto flex flex-col gap-8 md:ml-0 md:justify-center md:h-[500px] md:min-w-[calc(50%-16px)]">
+            <p>
+              Nous vous apportons le meilleur mélange de produits biologiques de
+              saison et d'artisanat de ferme directement à votre porte en
+              travaillant en partenariat avec des fermes locales et des artisans
+              de votre région. Découvrez la fraîcheur et la qualité de nos
+              produits, le tout dans le confort de votre foyer.
+            </p>
+          </div>
         </div>
       </section>
       {/* fin section 5 */}
