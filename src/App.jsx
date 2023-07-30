@@ -272,21 +272,21 @@ function App() {
       </section>
       {/* fin section 5 */}
       {/* section 6 */}
-      <section className=" flex flex-col gap-[50px]">
-        <h2 className="text-center text-[32px] max-w-[349px] mt-5 mx-auto">
+      <section className="max-w-5xl px-2 flex flex-col gap-[50px]">
+        <h2 className="text-center text-[32px] max-w-[75%] mt-5 mx-auto">
           Apprenez à cuisiner en ligne
         </h2>
-        <div className="max-w-[350px] px-2 m-auto">
-          <p className="">
+        <div className="max-w-[75%] px-2 m-auto ">
+          <p>
             Découvrez l'art de la cuisine depuis chez vous avec nos cours en
             ligne ! Plongez dans un monde de saveurs et d'expertise culinaire,
             tout en perfectionnant vos talents de chef.
           </p>
         </div>
-        <div className="max-w-[349px] m-auto flex flex-col gap-[50px]">
-          <img src="/src/assets/images/apprendre-1.jpg" alt="" />
-          <img src="/src/assets/images/apprendre-2.jpg" alt="" />
-          <img src="/src/assets/images/apprendre-3.jpg" alt="" />
+        <div className="m-auto flex flex-col gap-8 md:flex-row md:gap-4">
+          <img className="md:max-w-[33%]" src="/src/assets/images/apprendre-1.jpg" alt="Image représentant des hommes préparant des assiettes" />
+          <img className="md:max-w-[33%]" src="/src/assets/images/apprendre-2.jpg" alt="Image représentant un four à bois en cour de chauffe" />
+          <img className="md:max-w-[33%]" src="/src/assets/images/apprendre-3.jpg" alt="Image représentant un ustensil de cuisine" />
         </div>
         <a className="underline font-bold text-center text-[22px]" href="#">
           En savoir plus
@@ -299,17 +299,17 @@ function App() {
           <img
             className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%] "
             src="/src/assets/images/image-bottom (1).jpg"
-            alt=""
+            alt="Image représentant de la viande rouge coupée"
           />
           <img
             className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%]"
             src="/src/assets/images/image-bottom (2).jpg"
-            alt=""
+            alt="Image représentant un ribs"
           />
           <img
             className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%]"
             src="/src/assets/images/image-bottom (3).jpg"
-            alt=""
+            alt="Image représentant un homme en train de couper de la viande"
           />
         </div>
         <div className="max-w-[358px] px-2 m-auto md:max-w-[75%] ">
@@ -321,9 +321,9 @@ function App() {
           </p>
         </div>
         <div className="flex justify-center gap-3">
-          <img src="/src/assets/svg/facebook.svg" alt="" />
-          <img src="/src/assets/svg/twitter.svg" alt="" />
-          <img src="/src/assets/svg/intagram.svg" alt="" />
+          <img src="/src/assets/svg/facebook.svg" alt="Icon de facebook" />
+          <img src="/src/assets/svg/twitter.svg" alt="Icon de twitter" />
+          <img src="/src/assets/svg/intagram.svg" alt="Icon de Instagram" />
         </div>
       </section>
       {/* fin section 7 */}
