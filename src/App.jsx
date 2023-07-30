@@ -68,6 +68,7 @@ function App() {
       img: "/src/assets/images/article-histoire.jpg",
       titleH2: "Histoire",
       titleH3: "Étrange histoire de l'émergence de la cuisine saine",
+      altImage: "Image représentant des brownies avec des framboises",
       content:
         "Explorez l'émergence étonnante de la cuisine saine dans cette histoire captivante de saveurs et de bien-être. Un voyage culinaire à ne pas manquer !",
     },
@@ -75,6 +76,7 @@ function App() {
       img: "/src/assets/images/article-communauté.jpg",
       titleH2: "Communauté",
       titleH3: "Alimentation saine sur les réseaux sociaux.",
+      altImage: "Images représentant un bol de nourriture",
       content:
         "Découvrez l'alimentation saine sur les réseaux sociaux et inspirez-vous pour un mode de vie équilibré. Explorez la révolution des médias sociaux et la santé.",
     },
@@ -82,6 +84,7 @@ function App() {
       img: "/src/assets/images/article-philosophie.jpg",
       titleH2: "Philosophie",
       titleH3: "Rien que la meilleure nourriture, les meilleurs invités.",
+      altImage: "Images représentant des avocats farcie aux légumes",
       content:
         "Succombez à l'excellence culinaire, entouré des meilleurs convives. Découvrez comment notre passion pour la gastronomie sublime l'art de recevoir.",
     },
@@ -139,7 +142,7 @@ function App() {
       </div>
       {/* fin Section 1 */}
       {/* section 2 */}
-      <section className="px-4 py-[35px]">
+      <section className="px-4 py-8">
         <h2 className="text-[32px] underline text-center ">Notre menu</h2>
         <h3 className="text-[24px] text-center pb-[35px]">Délice du chef</h3>
         <div className="flex flex-col gap-8 md:flex-wrap md:flex-row max-w-5xl m-auto">
@@ -173,7 +176,11 @@ function App() {
                       className="bg-black rounded-lg bg-opacity-[60%] h-[170px] w-[150px] flex flex-col items-center gap-[27px] justify-center text-center"
                       key={index}
                     >
-                      <img className="max-w-[48px]" src={icon.svg} alt={`svg ${icon.text}`} />
+                      <img
+                        className="max-w-[48px]"
+                        src={icon.svg}
+                        alt={`svg ${icon.text}`}
+                      />
                       <p className="uppercase text-[16px]">{icon.text}</p>
                     </article>
                   ))}
@@ -183,36 +190,40 @@ function App() {
       </section>
       {/* fin section 3 */}
       {/* section 4 */}
-      <section>
+      <section className="max-w-5xl md:flex px-2 md:py-8 m-auto">
         {articles.length <= 0
           ? null
           : articles.map((article, index) => (
               <article
-                className="text-center flex flex-col px-2 gap-[32px] my-[32px]"
+                className={`text-center flex flex-col md:flex-1 px-2 gap-8 md:gap-0  my-8 md:px-0 ${
+                  index === 1 && "md:flex-col-reverse"
+                }`}
                 key={index}
               >
                 <img
-                  className="h-[296px] w-[350px] object-cover m-auto"
+                  className="h-[350px] w-[350px] object-cover m-auto md:m-0 md:w-full"
                   src={article.img}
-                  alt=""
+                  alt={article.altImage}
                 />
-                <h2 className="max-w-[362px] m-auto text-[32px]">
-                  {article.titleH2}
-                </h2>
-                <h3 className="max-w-[362px] m-auto text-[24px]">
-                  {article.titleH3}
-                </h3>
-                <div>
-                  <p className="max-w-[362px] m-auto text-[18px]">
-                    {article.content}
-                  </p>
+                <div className="flex flex-col gap-2 pb-3 md:min-h-[350px]">
+                  <h2 className="max-w-[362px] m-auto text-[32px]">
+                    {article.titleH2}
+                  </h2>
+                  <h3 className="max-w-[362px] m-auto text-[24px]">
+                    {article.titleH3}
+                  </h3>
+                  <div className="flex flex-col gap-8">
+                    <p className="max-w-[362px] m-auto text-[18px]">
+                      {article.content}
+                    </p>
+                  </div>
+                  <a
+                    className="underline text-[22px] font-bold hover:cursor-pointer"
+                    href="#"
+                  >
+                    En savoir plus
+                  </a>
                 </div>
-                <a
-                  className="underline text-[22px] font-bold hover:cursor-pointer"
-                  href="#"
-                >
-                  En savoir plus
-                </a>
               </article>
             ))}
       </section>
