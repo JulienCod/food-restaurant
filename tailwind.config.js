@@ -12,16 +12,16 @@ export default {
         cursive: ['Berkshire Swash', 'cursive'],
         serif: ['Playfair Display', 'serif'],
       },
-      animation: {
-        'arrow': 'arrow-down 1.5s ease infinite',
+      animation:{
+        'arrow':'arrow-down 1.5s ease infinite',
       },
       keyframes: {
-        'arrow-down': {
-          '0%': { transform: 'translateY(-10px)' },
-          '50%': { transform: 'translateY(10px)' },
-          '100%': { transform: 'translateY(-10px)' },
-        },
-      },
+        'arrow-down':{
+          '0%': {transform: 'translateY(-10px)'},
+          '50%': {transform: 'translateY(10px)'},
+          '100%': {transform: 'translateY(-10px)'},
+        }
+      }
     },
   },
   plugins: [
