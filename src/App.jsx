@@ -1,6 +1,7 @@
 import gsap, { Linear } from "gsap";
 import { useEffect, useRef } from "react";
 import useScrollPosition from "./assets/components/hook/useScrollPosition";
+import HeroBanner from "./assets/components/hero-banner/heroBanner";
 function App() {
   const itemsMenu = [
     {
@@ -123,66 +124,7 @@ function App() {
   }, [scrollPosition]);
   return (
     <>
-      {/* Section 1 */}
-      <div className=" text-gray-100 bg-center bg-cover bg-[url('/src/assets/images/image-top.webp')]">
-        <div className=" bg-black h-full w-full bg-opacity-75 z-0">
-          <header
-            className="relative top-0 flex items-center justify-between p-4 container m-auto animate"
-            ref={(el) => animateElementsRef.current.push(el)}
-          >
-            <img
-              className="h-[50px] md:h-[75px] "
-              src="/src/assets/images/logo-restaurant.webp"
-              alt="logo du site food restaurant"
-            />
-            <div className="mx-4 ">
-              <img
-                className="z-10 md:h-[40px] hover:cursor-pointer "
-                src="/src/assets/svg/menu-burger.svg"
-                alt="image menu burger"
-              />
-            </div>
-          </header>
-          <section className="px-4 py-8 z-10 flex flex-col gap-4 md:gap-16 md:py-16 h-full">
-            <div>
-              <img
-                className="w-[70%] m-auto max-w-[400px] animate"
-                ref={(el) => animateElementsRef.current.push(el)}
-                src="/src/assets/images/logo-restaurant.webp"
-                alt="logo du site food restaurant"
-              />
-            </div>
-            <div>
-              <h1
-                className="text-center text-[36px] max-w-2xl m-auto md:text-[50px] lg:max-w-none lg:text-[75px] animate"
-                ref={(el) => animateElementsRef.current.push(el)}
-              >
-                Goûtez l'harmonie des ingrédients frais et locaux.
-              </h1>
-            </div>
-            <div>
-              <p
-                className="text-[18px] text-center max-w-xl m-auto md:text-[24px] lg:max-w-none lg:text-[40px] animate"
-                ref={(el) => animateElementsRef.current.push(el)}
-              >
-                Savourez l'harmonie des ingrédients frais et locaux, sublimant
-                chaque plat pour une expérience gustative inégalée chez Food
-                Restaurant. Une cuisine raffinée, respectueuse de la nature et
-                de ses trésors culinaires.
-              </p>
-            </div>
-            <div className="m-auto">
-              <img
-                className="animate-arrow element animate"
-                ref={(el) => animateElementsRef.current.push(el)}
-                src="/src/assets/svg/flèche.svg"
-                alt="Flèche"
-              />
-            </div>
-          </section>
-        </div>
-      </div>
-      {/* fin Section 1 */}
+      <HeroBanner animateElementsRef= {animateElementsRef}/>
       {/* section 2 */}
       <section className="px-2 py-8 md:px-4">
         <h2
