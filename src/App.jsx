@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import useScrollPosition from "./assets/components/hook/useScrollPosition";
 import HeroBanner from "./assets/components/hero-banner/heroBanner";
 import MenuCard from "./assets/components/menu-card/menuCard";
+import IconDelivery from "./assets/components/icon-delivery/iconDelivery";
 function App() {
   const itemsMenu = [
     {
@@ -129,34 +130,9 @@ function App() {
       
       <MenuCard animateElementsRef={animateElementsRef} itemsMenu={itemsMenu}/>
 
+      <IconDelivery animateElementsRef={ animateElementsRef } icons={icons}/>
+
       
-      {/* section 3 */}
-      <section className="text-gray-100  bg-[url('/src/assets/images/section-2.webp')] bg-center bg-cover">
-        <div className=" bg-black h-full w-full bg-opacity-60 z-0 ">
-          <div className="max-w-5xl m-auto">
-            <div className="px-2 py-5 gap-5 flex flex-wrap items-center justify-center sm:px-10 sm:py-20 sm:ml-auto sm:w-[640px] lg:w-[800px] sm:justify-end">
-              {icons.length <= 0
-                ? null
-                : icons.map((icon, index) => (
-                    <article
-                      className="bg-black rounded-lg bg-opacity-[60%] h-[150px] w-[150px] lg:h-[200px] lg:w-[200px] flex flex-col items-center gap-[27px] justify-center text-center animate"
-                      ref={(el) => animateElementsRef.current.push(el)}
-                      key={index}
-                    >
-                      <img
-                        loading="lazy"
-                        className="max-w-[48px]"
-                        src={icon.svg}
-                        alt={`svg ${icon.text}`}
-                      />
-                      <p className="uppercase text-[16px] lg:text-[22px] ">{icon.text}</p>
-                    </article>
-                  ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* fin section 3 */}
       {/* section 4 */}
       <section className="max-w-5xl md:flex px-2 md:py-8 m-auto">
         {articles.length <= 0
