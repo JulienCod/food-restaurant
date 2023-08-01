@@ -4,6 +4,17 @@ import useScrollPosition from "./assets/components/hook/useScrollPosition";
 import HeroBanner from "./assets/components/hero-banner/heroBanner";
 import MenuCard from "./assets/components/menu-card/menuCard";
 import IconDelivery from "./assets/components/icon-delivery/iconDelivery";
+import IconIceScreamCone from "./assets/svg/conet-glace.svg";
+import Iconsorbet from "./assets/svg/fruit-sorbets.svg";
+import IconVariantIce from "./assets/svg/corner-penché.svg";
+import IconCupIce from "./assets/svg/coupe-glace.svg";
+import IconSmoothies from "./assets/svg/smoothies.svg";
+import IconDrink from "./assets/svg/boissons.svg";
+import ArticleBlog from "./assets/components/article-blog/articleBlog";
+import ImageArticleBlog1 from "./assets/images/article-histoire.webp";
+import ImageArticleBlog2 from "./assets/images/article-communauté.webp";
+import ImageArticleBlog3 from "./assets/images/article-philosophie.webp";
+
 function App() {
   const itemsMenu = [
     {
@@ -44,34 +55,34 @@ function App() {
 
   const icons = [
     {
-      svg: "/src/assets/svg/conet-glace.svg",
+      svg: IconIceScreamCone,
       text: "top glace",
     },
     {
-      svg: "/src/assets/svg/fruit-sorbets.svg",
+      svg: Iconsorbet,
       text: "Fruit Sorbets",
     },
     {
-      svg: "/src/assets/svg/corner-penché.svg",
+      svg: IconVariantIce,
       text: "variété de glace",
     },
     {
-      svg: "/src/assets/svg/coupe-glace.svg",
+      svg: IconCupIce,
       text: "Coupes glacées",
     },
     {
-      svg: "/src/assets/svg/smoothies.svg",
+      svg: IconSmoothies,
       text: "Smoothies",
     },
     {
-      svg: "/src/assets/svg/boissons.svg",
+      svg: IconDrink,
       text: "Boissons & Plus",
     },
   ];
 
   const articles = [
     {
-      img: "/src/assets/images/article-histoire.webp",
+      img: ImageArticleBlog1,
       titleH2: "Histoire",
       titleH3: "Étrange histoire de l'émergence de la cuisine saine",
       altImage: "Image représentant des brownies avec des framboises",
@@ -79,7 +90,7 @@ function App() {
         "Explorez l'émergence étonnante de la cuisine saine dans cette histoire captivante de saveurs et de bien-être. Un voyage culinaire à ne pas manquer !",
     },
     {
-      img: "/src/assets/images/article-communauté.webp",
+      img: ImageArticleBlog2,
       titleH2: "Communauté",
       titleH3: "Alimentation saine sur les réseaux sociaux.",
       altImage: "Images représentant un bol de nourriture",
@@ -87,7 +98,7 @@ function App() {
         "Découvrez l'alimentation saine sur les réseaux sociaux et inspirez-vous pour un mode de vie équilibré. Explorez la révolution des médias sociaux et la santé.",
     },
     {
-      img: "/src/assets/images/article-philosophie.webp",
+      img: ImageArticleBlog3,
       titleH2: "Philosophie",
       titleH3: "Rien que la meilleure nourriture, les meilleurs invités.",
       altImage: "Images représentant des avocats farcie aux légumes",
@@ -132,48 +143,8 @@ function App() {
 
       <IconDelivery animateElementsRef={ animateElementsRef } icons={icons}/>
 
+      <ArticleBlog animateElementsRef={animateElementsRef} articles={articles} />
       
-      {/* section 4 */}
-      <section className="max-w-5xl md:flex px-2 md:py-8 m-auto">
-        {articles.length <= 0
-          ? null
-          : articles.map((article, index) => (
-              <article
-                ref={(el) => animateElementsRef.current.push(el)}
-                className={`text-center flex flex-col md:flex-1 px-2 gap-8 md:gap-0  my-8 md:px-0 animate  ${
-                  index === 1 && "md:flex-col-reverse"
-                }`}
-                key={index}
-              >
-                <img
-                  loading="lazy"
-                  className="h-[350px] w-[350px] object-cover m-auto md:m-0 md:w-full"
-                  src={article.img}
-                  alt={article.altImage}
-                />
-                <div className="flex flex-col gap-2 pb-3 md:min-h-[350px]">
-                  <h2 className="max-w-[362px] m-auto text-[32px] lg:text-[40px]">
-                    {article.titleH2}
-                  </h2>
-                  <h3 className="max-w-[362px] m-auto text-[24px] lg:text-[32px]">
-                    {article.titleH3}
-                  </h3>
-                  <div className="flex flex-col gap-8">
-                    <p className="max-w-[362px] m-auto text-[18px]">
-                      {article.content}
-                    </p>
-                  </div>
-                  <a
-                    className="underline text-[22px] font-bold hover:cursor-pointer"
-                    href="#"
-                  >
-                    En savoir plus
-                  </a>
-                </div>
-              </article>
-            ))}
-      </section>
-      {/* fin section 4 */}
       {/* section 5 */}
       <section className="max-w-5xl flex flex-col gap-[50px] px-2 m-auto">
         <div className="md:flex md:gap-8">
