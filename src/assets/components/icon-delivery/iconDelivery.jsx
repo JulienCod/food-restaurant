@@ -4,7 +4,7 @@ const IconDelivery = ({ icons, animateElementsRef}) => {
   return (
     <section className="text-gray-100  bg-[url('/src/assets/images/section-2.webp')] bg-center bg-cover">
       <div className=" bg-black h-full w-full bg-opacity-60 z-0 ">
-        <div className="max-w-5xl m-auto">
+        <div className="max-w-7xl m-auto">
           <div className="px-2 py-5 gap-5 flex flex-wrap items-center justify-center sm:px-10 sm:py-20 sm:ml-auto sm:w-[640px] lg:w-[800px] sm:justify-end">
             {icons.length <= 0
               ? null

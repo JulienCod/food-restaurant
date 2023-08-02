@@ -2,7 +2,7 @@ import Images from "../image/images";
 
 const ArticleBlog = ({ articles, animateElementsRef }) => {
   return (
-    <section className="max-w-5xl md:flex px-2 md:py-8 m-auto">
+    <section className="max-w-7xl md:flex px-2 md:py-8 m-auto">
       {articles.length <= 0
         ? null
         : articles.map((article, index) => (

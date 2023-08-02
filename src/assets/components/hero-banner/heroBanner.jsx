@@ -8,7 +8,7 @@ const HeroBanner = ({ animateElementsRef }) => {
     <div className=" text-gray-100 bg-center bg-cover bg-[url('/src/assets/images/image-top.webp')]">
       <div className=" bg-black h-full w-full bg-opacity-75 z-0">
         <header
-          className="relative top-0 flex items-center justify-between p-4 container m-auto animate"
+          className="relative top-0 flex items-center justify-between p-4 max-w-7xl m-auto animate"
           ref={(el) => animateElementsRef.current.push(el)}
         >
           <Images
@@ -26,7 +26,7 @@ const HeroBanner = ({ animateElementsRef }) => {
             />
           </div>
         </header>
-        <section className="px-4 py-8 z-10 flex flex-col gap-4 md:gap-16 md:py-16 h-full">
+        <section className="px-4 py-8 z-10 flex flex-col gap-4 md:gap-16 md:py-16 h-full max-w-7xl m-auto">
           <div
             ref={(el) => animateElementsRef.current.push(el)}
             className="animate"
