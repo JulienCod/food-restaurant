@@ -16,6 +16,7 @@ import ImageArticleBlog2 from "./assets/images/article-communauté.webp";
 import ImageArticleBlog3 from "./assets/images/article-philosophie.webp";
 import Card from "./assets/components/card/card";
 import LearnToCook from "./assets/components/learn-to-cook/LearnToCook";
+import BottomPage from "./assets/components/bottom-page/bottomPage";
 
 
 
@@ -153,63 +154,7 @@ function App() {
 
       <LearnToCook animateElementsRef={animateElementsRef} />
 
-      {/* section 7 */}
-      <section className="flex flex-col gap-[50px] my-[50px]">
-        <div className="md:flex">
-          <img
-            loading="lazy"
-            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%] animate"
-            ref={(el) => animateElementsRef.current.push(el)}
-            src="/src/assets/images/image-bottom (1).webp"
-            alt="Image représentant de la viande rouge coupée "
-          />
-          <img
-            loading="lazy"
-            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%] animate"
-            ref={(el) => animateElementsRef.current.push(el)}
-            src="/src/assets/images/image-bottom (2).webp"
-            alt="Image représentant un ribs"
-          />
-          <img
-            loading="lazy"
-            className="h-[560px] w-full object-cover md:h-[400px] md:w-[33%] animate"
-            ref={(el) => animateElementsRef.current.push(el)}
-            src="/src/assets/images/image-bottom (3).webp"
-            alt="Image représentant un homme en train de couper de la viande"
-          />
-        </div>
-        <div
-          className="animate gap-[50px] flex flex-col"
-          ref={(el) => animateElementsRef.current.push(el)}
-        >
-          <div className="max-w-[358px] px-2 m-auto md:max-w-[75%]">
-            <p className=" font-bold text-center text-[18px] lg:text-[24px]">
-              Nous apportons le meilleur mélange de produits biologiques de la
-              saison produits fermiers et artisanaux facilement à votre porte en
-              cultivant et partenariat avec des fermes et des artisans locaux
-              dans votre région.
-            </p>
-          </div>
-          <div className="flex justify-center gap-3 ">
-            <img
-              loading="lazy"
-              src="/src/assets/svg/facebook.svg"
-              alt="Icon de facebook"
-            />
-            <img
-              loading="lazy"
-              src="/src/assets/svg/twitter.svg"
-              alt="Icon de twitter"
-            />
-            <img
-              loading="lazy"
-              src="/src/assets/svg/intagram.svg"
-              alt="Icon de Instagram"
-            />
-          </div>
-        </div>
-      </section>
-      {/* fin section 7 */}
+      <BottomPage animateElementsRef={animateElementsRef}/>
       {/* footer */}
       <footer className="bg-gray-300 h-[100px] flex justify-center items-center">
         <p className="text-[20px] lg:text-[26px] font-bold text-center">
