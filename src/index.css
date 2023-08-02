@@ -1,4 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: 'Berkshire Swash';
+  src: url('./assets/font/berkshire/BerkshireSwash-Regular.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition de la police Playfair Display */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./assets/font/playfair/PlayfairDisplay-VariableFont_wght.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -29,4 +45,40 @@ h6 {
 }
 .animate{
   opacity:0;
+}
+
+.hero-banner{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('./assets//images/image-top.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Styles pour centrer le loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Assurez-vous que le loader est au-dessus du contenu */
+}
+
+/* Styles pour l'icône de chargement */
+.loader-icon {
+  border: 4px solid #f3f3f3; /* Couleur des bordures du spinner */
+  border-top: 4px solid #3498db; /* Couleur de la partie supérieure du spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
