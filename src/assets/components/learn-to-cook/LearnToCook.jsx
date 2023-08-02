@@ -32,6 +32,8 @@ const LearnToCook = ({ animateElementsRef }) => {
             alt={"Image représentant des hommes préparant des assiettes"}
             isLazy={true}
             className={"w-full h-full"}
+            width={750}
+          height={500}
           />
         </div>
         <div
@@ -43,6 +45,8 @@ const LearnToCook = ({ animateElementsRef }) => {
             alt={"Image représentant un four à bois en cour de chauffe"}
             isLazy={true}
             className={"w-full h-full"}
+            width={750}
+          height={500}
           />
         </div>
         <div
@@ -54,6 +58,8 @@ const LearnToCook = ({ animateElementsRef }) => {
             alt={"Image représentant un ustensil de cuisine"}
             isLazy={true}
             className={"w-full h-full"}
+            width={750}
+          height={500}
           />
         </div>
       </div>

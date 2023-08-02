@@ -20,6 +20,8 @@ const ArticleBlog = ({ articles, animateElementsRef }) => {
                   "h-[350px] w-[350px] object-cover m-auto md:m-0 md:w-full"
                 }
                 isLazy={true}
+                width={440}
+                height={350}
               />
               <div className="flex flex-col gap-2 pb-3 md:min-h-[350px]">
                 <h2 className="max-w-[362px] m-auto text-[32px] lg:text-[40px]">

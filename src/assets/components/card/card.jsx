@@ -32,10 +32,10 @@ const Card = ({ animateElementsRef }) => {
           <Images
             src={ImageHealthy}
             alt={"Image représentant une bol de nourriture"}
-            className={
-              "w-full h-[298px] md:h-[550px] object-cover"
-            }
+            className={"w-full h-[298px] md:h-[550px] object-cover"}
             isLazy={true}
+            width={550}
+            height={550}
           />
         </div>
       </div>
@@ -47,10 +47,10 @@ const Card = ({ animateElementsRef }) => {
           <Images
             src={ImageHealthy2}
             alt={"Image représentant un bol de fruit"}
-            className={
-              "w-full h-[298px] md:h-[550px] object-cover"
-            }
+            className={"w-full h-[298px] md:h-[550px] object-cover"}
             isLazy={true}
+            width={550}
+            height={550}
           />
         </div>
         <div

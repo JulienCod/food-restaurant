@@ -1,6 +1,6 @@
 import Images from "../image/images";
 
-const IconDelivery = ({ icons, animateElementsRef}) => {
+const IconDelivery = ({ icons, animateElementsRef }) => {
   return (
     <section className="text-gray-100  bg-[url('/src/assets/images/section-2.webp')] bg-center bg-cover">
       <div className=" bg-black h-full w-full bg-opacity-60 z-0 ">
@@ -14,7 +14,14 @@ const IconDelivery = ({ icons, animateElementsRef}) => {
                     ref={(el) => animateElementsRef.current.push(el)}
                     key={index}
                   >
-                    <Images src={icon.svg} alt={`svg ${icon.text}`} className={"max-w-[48px]"} isLazy={true} />
+                    <Images
+                      src={icon.svg}
+                      alt={`svg ${icon.text}`}
+                      className={"max-w-[48px]"}
+                      isLazy={true}
+                      width={48}
+                      height={48}
+                    />
 
                     <p className="uppercase text-[16px] lg:text-[22px] ">
                       {icon.text}

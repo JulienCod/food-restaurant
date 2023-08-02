@@ -91,7 +91,7 @@ function App() {
       img: ImageArticleBlog1,
       titleH2: "Histoire",
       titleH3: "Étrange histoire de l'émergence de la cuisine saine",
-      altImage: "Image représentant des brownies avec des framboises",
+      alt: "Image représentant des brownies avec des framboises",
       content:
         "Explorez l'émergence étonnante de la cuisine saine dans cette histoire captivante de saveurs et de bien-être. Un voyage culinaire à ne pas manquer !",
     },
@@ -99,7 +99,7 @@ function App() {
       img: ImageArticleBlog2,
       titleH2: "Communauté",
       titleH3: "Alimentation saine sur les réseaux sociaux.",
-      altImage: "Images représentant un bol de nourriture",
+      alt: "Images représentant un bol de nourriture",
       content:
         "Découvrez l'alimentation saine sur les réseaux sociaux et inspirez-vous pour un mode de vie équilibré. Explorez la révolution des médias sociaux et la santé.",
     },
@@ -107,7 +107,7 @@ function App() {
       img: ImageArticleBlog3,
       titleH2: "Philosophie",
       titleH3: "Rien que la meilleure nourriture, les meilleurs invités.",
-      altImage: "Images représentant des avocats farcie aux légumes",
+      alt: "Images représentant des avocats farcie aux légumes",
       content:
         "Succombez à l'excellence culinaire, entouré des meilleurs convives. Découvrez comment notre passion pour la gastronomie sublime l'art de recevoir.",
     },
