@@ -17,6 +17,7 @@ import ImageArticleBlog3 from "./assets/images/article-philosophie.webp";
 import Card from "./assets/components/card/card";
 import LearnToCook from "./assets/components/learn-to-cook/LearnToCook";
 import BottomPage from "./assets/components/bottom-page/bottomPage";
+import Footer from "./assets/components/layout/footer/footer";
 
 
 
@@ -155,16 +156,8 @@ function App() {
       <LearnToCook animateElementsRef={animateElementsRef} />
 
       <BottomPage animateElementsRef={animateElementsRef}/>
-      {/* footer */}
-      <footer className="bg-gray-300 h-[100px] flex justify-center items-center">
-        <p className="text-[20px] lg:text-[26px] font-bold text-center">
-          Réalisé par{" "}
-          <a className="underline" href="https://julien-webandco.fr">
-            Julien Web&Co
-          </a>
-        </p>
-      </footer>
-      {/* fin footer */}
+      
+      <Footer />
     </>
   );
 }
