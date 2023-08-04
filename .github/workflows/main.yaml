@@ -31,4 +31,4 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          scp -P '${secrets.PORT}' -r dist/* '${secrets.USER}'@'${secrets.IP}':'${secrets.PATH}'
+          scp -P ${{ secrets.PORT }} -r dist/* ${{ secrets.USER }}@${{ secrets.IP }}:${{ secrets.PATH }}
