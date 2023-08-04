@@ -35,6 +35,13 @@ jobs:
           yarn build
           # Ajoutez ici les étapes nécessaires pour déployer votre application (par exemple, transfert des fichiers construits vers le serveur).
 
-      - name: Deploy to Server
-        run: |
-          scp -P ${{ secrets.PORT }} -r dist/* ${{ secrets.USER }}@${{ secrets.IP }}:${{ secrets.PATH }}
+      - name: Upload to server
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          remote_path: ${{ secrets.PATH }}
+          server_address: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.PASSWORD }}
+          sftpArgs: -r  # Pour copier les fichiers récursivement
+          port: ${{ secrets.PORT }}  # Port par défaut pour SFTP
