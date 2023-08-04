@@ -16,7 +16,7 @@ const LearnToCook = ({ animateElementsRef }) => {
         className="md:max-w-[75%] m-auto animate"
         ref={(el) => animateElementsRef.current.push(el)}
       >
-        <p className="text-[18px] lg:text-[24px]">
+        <p className="text-[18px] lg:text-[22px]">
           Découvrez l'art de la cuisine depuis chez vous avec nos cours en ligne
           ! Plongez dans un monde de saveurs et d'expertise culinaire, tout en
           perfectionnant vos talents de chef.

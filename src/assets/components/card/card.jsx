@@ -7,13 +7,13 @@ const Card = ({ animateElementsRef }) => {
     <section className="max-w-7xl flex flex-col gap-[50px] px-2 m-auto">
       <div className="md:flex md:gap-8 md:justify-center">
         <div
-          className="max-w-[344px] my-[18px] md:mr-0 flex flex-col gap-8 md:justify-center md:gap-4 md:h-[500px] md:min-w-[calc(50%-16px)] md:w-[calc(50%-16px)] animate "
+          className="md:max-w-[344px] m-auto my-[18px] md:mr-0 flex flex-col gap-8 md:justify-center md:gap-4 md:h-[500px] md:min-w-[calc(50%-16px)] md:w-[calc(50%-16px)] animate "
           ref={(el) => animateElementsRef.current.push(el)}
         >
-          <h2 className="text-[32px] w-[305px] mx-auto text-center lg:text-[40px]">
+          <h2 className="text-[32px] text-center mx-auto lg:text-[40px]">
             La santé est le bien le plus précieux.
           </h2>
-          <p className="text-[18px] lg:text-[24px]">
+          <p className="text-center text-[18px] lg:text-[22px] ">
             Bien qu'il soit important d'avoir des sucres naturellement présents
             dans votre alimentation, de nombreux aliments contiennent des sucres
             ajoutés nocifs qui n'apportent aucune valeur nutritive.
@@ -54,10 +54,10 @@ const Card = ({ animateElementsRef }) => {
           />
         </div>
         <div
-          className="max-w-[344px] my-[18px] flex flex-col gap-8 md:ml-0 md:justify-center md:h-[500px] md:max-w-[calc(50%-16px)] animate"
+          className=" my-[18px] flex flex-col gap-8 md:ml-0 md:justify-center md:h-[500px] md:max-w-[calc(50%-16px)] animate"
           ref={(el) => animateElementsRef.current.push(el)}
         >
-          <p className="text-[18px] lg:text-[24px]">
+          <p className="text-center text-[18px] lg:text-[22px]">
             Nous vous apportons le meilleur mélange de produits biologiques de
             saison et d'artisanat de ferme directement à votre porte en
             travaillant en partenariat avec des fermes locales et des artisans

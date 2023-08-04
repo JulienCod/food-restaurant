@@ -3,6 +3,7 @@ import iconArrow from "../../svg/flèche.svg";
 import Images from "../image/images";
 import Header from "../layout/header/header";
 
+
 const HeroBanner = ({ animateElementsRef }) => {
   return (
     <div className=" text-gray-100 hero-banner">
@@ -23,7 +24,7 @@ const HeroBanner = ({ animateElementsRef }) => {
         </div>
         <div>
           <h1
-            className="text-center text-[36px] max-w-2xl m-auto md:text-[50px] lg:max-w-none lg:text-[75px] animate"
+            className="text-center text-[36px] max-w-2xl m-auto md:text-[50px] lg:max-w-none  animate"
             ref={(el) => animateElementsRef.current.push(el)}
           >
             Goûtez l'harmonie des ingrédients frais et locaux.
@@ -31,7 +32,7 @@ const HeroBanner = ({ animateElementsRef }) => {
         </div>
         <div>
           <p
-            className="text-[18px] text-center max-w-xl m-auto md:text-[24px] lg:max-w-none lg:text-[40px] animate"
+            className="text-[18px] text-center max-w-xl m-auto md:text-[24px] lg:max-w-none animate"
             ref={(el) => animateElementsRef.current.push(el)}
           >
             Savourez l'harmonie des ingrédients frais et locaux, sublimant
@@ -47,10 +48,10 @@ const HeroBanner = ({ animateElementsRef }) => {
           <Images
             src={iconArrow}
             alt={"icone d'une Flèche"}
-            className={"animate-arrow element"}
+            className={"animate-arrow element h-[40px] md:h-[70px]"}
             isLazy={false}
-            width={75}
-            height={75}
+            width={70}
+            height={70}
           />
         </div>
       </section>

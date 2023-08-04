@@ -8,7 +8,7 @@ const Header = () => {
       <Images
         src={logoRestaurannt}
         alt={"logo du site food restaurant"}
-        className={"h-[45px] w-[50px] md:h-[61.5px] md:w-[75px]"}
+        className={"h-[45px] w-[50px] "}
         isLazy={false}
         width={75}
         height={62}
@@ -17,7 +17,7 @@ const Header = () => {
         <Images
           src={logoMenuBurger}
           alt={"image menu burger"}
-          className={"z-10 md:h-[40px] hover:cursor-pointer "}
+          className={"h-[40px] md:h-[50px] hover:cursor-pointer "}
           isLazy={false}
           width={50}
           height={50}

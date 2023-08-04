@@ -24,14 +24,14 @@ const ArticleBlog = ({ articles, animateElementsRef }) => {
                 height={350}
               />
               <div className="flex flex-col gap-2 pb-3 md:min-h-[350px]">
-                <h2 className="max-w-[362px] m-auto text-[32px] lg:text-[40px]">
+                <h2 className="md:max-w-[362px] m-auto text-[32px] lg:text-[40px]">
                   {article.titleH2}
                 </h2>
-                <h3 className="max-w-[362px] m-auto text-[24px] lg:text-[32px]">
+                <h3 className="md:max-w-[362px] m-auto text-[24px] lg:text-[32px]">
                   {article.titleH3}
                 </h3>
                 <div className="flex flex-col gap-8">
-                  <p className="max-w-[362px] m-auto text-[18px]">
+                  <p className="md:max-w-[362px] m-auto text-[18px]">
                     {article.content}
                   </p>
                 </div>

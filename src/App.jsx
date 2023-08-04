@@ -1,6 +1,8 @@
-import gsap, { Linear } from "gsap";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { useEffect, useRef } from "react";
-import useScrollPosition from "./assets/components/hook/useScrollPosition";
+// import useScrollPosition from "./assets/components/hook/useScrollPosition";
 import HeroBanner from "./assets/components/hero-banner/heroBanner";
 import MenuCard from "./assets/components/menu-card/menuCard";
 import IconDelivery from "./assets/components/icon-delivery/iconDelivery";
@@ -19,7 +21,7 @@ import LearnToCook from "./assets/components/learn-to-cook/LearnToCook";
 import BottomPage from "./assets/components/bottom-page/bottomPage";
 import Footer from "./assets/components/layout/footer/footer";
 
-
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 function App() {
   const itemsMenu = [
@@ -114,33 +116,62 @@ function App() {
   ];
 
   const animateElementsRef = useRef([]);
-  const animatedElements = useRef(new Set());
+  // const animatedElements = useRef(new Set());
 
-  const scrollPosition = useScrollPosition();
+  // const scrollPosition = useScrollPosition();
 
-  const animateElement = (element) => {
+  // const animateElement = (element) => {
+  //   gsap.fromTo(
+  //     element,
+  //     { opacity: 0, y: 200 },
+  //     { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }
+  //   );
+
+  //   animatedElements.current.add(element);
+  // };
+
+  const slideInTop = (elem, delay, duration) => {
     gsap.fromTo(
-      element,
-      { opacity: 0, y: 200 },
-      { opacity: 1, y: 0, duration: 0.6, ease: Linear }
-    );
-
-    animatedElements.current.add(element);
-  };
-
-  useEffect(() => {
-    const elements = animateElementsRef.current;
-    elements.forEach((element) => {
-      if (element) {
-        const boundingClientRect = element.getBoundingClientRect();
-        const isVisible = boundingClientRect.top <= window.innerHeight * 0.8;
-
-        if (isVisible && !animatedElements.current.has(element)) {
-          animateElement(element);
+        elem,
+        {
+            opacity: 0,
+            y: -300
+        },
+        {
+            opacity: 1,
+            y: 0,
+            delay: delay || 0.4,
+            duration: duration || 0.6,
+            scrollTrigger: {
+                trigger: elem,
+                start: "top center",
+                end: "bottom center"
+            }
         }
-      }
-    });
-  }, [scrollPosition]);
+    )
+}
+useEffect(() => {
+  const elements = animateElementsRef.current;
+  elements.forEach((element) => {
+    if (element) {
+      slideInTop(element);
+    }
+  });
+}, []);
+
+  // useEffect(() => {
+  //   const elements = animateElementsRef.current;
+  //   elements.forEach((element) => {
+  //     if (element) {
+  //       const boundingClientRect = element.getBoundingClientRect();
+  //       const isVisible = boundingClientRect.top <= window.innerHeight * 0.8;
+
+  //       if (isVisible && !animatedElements.current.has(element)) {
+  //         slideInTop(element);
+  //       }
+  //     }
+  //   });
+  // }, [scrollPosition]);
   return (
     <>
       <HeroBanner animateElementsRef= {animateElementsRef}/>

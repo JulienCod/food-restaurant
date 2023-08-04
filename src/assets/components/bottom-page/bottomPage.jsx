@@ -55,7 +55,7 @@ const BottomPage = ({ animateElementsRef }) => {
         ref={(el) => animateElementsRef.current.push(el)}
       >
         <div className="max-w-[358px] px-2 m-auto md:max-w-7xl">
-          <p className=" font-bold text-center text-[18px] lg:text-[24px]">
+          <p className=" font-bold text-center text-[18px] lg:text-[22px]">
             Nous apportons le meilleur mélange de produits biologiques de la
             saison produits fermiers et artisanaux facilement à votre porte en
             cultivant et partenariat avec des fermes et des artisans locaux dans
