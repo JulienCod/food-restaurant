@@ -12,14 +12,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Set up Node.js and Yarn
         uses: actions/setup-node@v2
         with:
           node-version: 14
-          cache: 'yarn'
 
       - name: Install Yarn
         run: npm install -g yarn --ignore-scripts
+
+      - name: Create SSH directory
+        run: mkdir -p $HOME/.ssh
+
+      - name: Set up SSH private key
+        run: echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/id_rsa && chmod 600 $HOME/.ssh/id_rsa
 
       - name: Install dependencies
         run: yarn install
@@ -27,10 +33,8 @@ jobs:
       - name: Build and deploy
         run: |
           yarn build
+          # Ajoutez ici les étapes nécessaires pour déployer votre application (par exemple, transfert des fichiers construits vers le serveur).
+
       - name: Deploy to Server
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
           scp -P ${{ secrets.PORT }} -r dist/* ${{ secrets.USER }}@${{ secrets.IP }}:${{ secrets.PATH }}
-        shell: /usr/bin/bash -e {0}
