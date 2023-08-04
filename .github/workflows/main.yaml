@@ -39,3 +39,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           sftpArgs: -r
           port: ${{ secrets.PORT }}
+          local_path: ./dist # Spécifiez le chemin local vers le dossier 'dist'
