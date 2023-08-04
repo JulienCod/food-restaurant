@@ -33,9 +33,9 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           remote_path: ${{ secrets.PATH }}
-          server_address: ${{ secrets.IP }}
+          server: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           password: ${{ secrets.PASSWORD }}
-          sftpArgs: -r  # Pour copier les fichiers récursivement
-          port: ${{ secrets.PORT }}  # Port par défaut pour SFTP
+          sftpArgs: -r
+          port: ${{ secrets.PORT }}
