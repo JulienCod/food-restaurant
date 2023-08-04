@@ -19,7 +19,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install Yarn
-        run: npm install -g yarn
+        run: npm install -g yarn --ignore-scripts
 
       - name: Install dependencies
         run: yarn install
