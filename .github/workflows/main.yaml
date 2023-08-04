@@ -32,3 +32,4 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           scp -P ${{ secrets.PORT }} -r dist/* ${{ secrets.USER }}@${{ secrets.IP }}:${{ secrets.PATH }}
+        shell: /usr/bin/bash -e {0}
