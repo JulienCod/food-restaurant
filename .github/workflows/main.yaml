@@ -12,11 +12,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
+      - name: Set up Node.js and Yarn
         uses: actions/setup-node@v2
         with:
           node-version: 14
+          cache: 'yarn'
+
+      - name: Install Yarn
+        run: npm install -g yarn
 
       - name: Install dependencies
         run: yarn install
@@ -24,8 +27,6 @@ jobs:
       - name: Build and deploy
         run: |
           yarn build
-          # Ajoutez ici les étapes nécessaires pour déployer votre application (par exemple, transfert des fichiers construits vers le serveur).
-
       - name: Deploy to Server
         run: |
           mkdir -p ~/.ssh
